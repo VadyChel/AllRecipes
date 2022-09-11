@@ -1,0 +1,14 @@
+.recipes-section {
+    margin: 0 auto;
+    display: flex;
+}
+
+.recipes-section > div {
+    margin: 10px;
+}
+
+.recipes-section-arrow-container {
+    font-size: 2em;
+    align-items: center;
+    display: flex;
+}

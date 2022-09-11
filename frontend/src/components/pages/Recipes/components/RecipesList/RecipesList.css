@@ -1,0 +1,8 @@
+.recipes-list {
+    display: flex;
+    margin: 0 auto;
+}
+
+.recipes-list > div {
+    margin: 10px;
+}

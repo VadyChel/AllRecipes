@@ -1,0 +1,106 @@
+.header-half1 {
+    background-color: #ccc;
+    height: 50px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    width: 50%;
+}
+
+.header-half2 {
+    background-color: #ccc;
+    height: 50px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    width: 50%;
+}
+
+.header-container {
+    display: flex;
+    position: relative;
+}
+
+.header-half1:hover ~ .header-rect1,
+.header-half1:hover ~ .header-rect2,
+.header-half1:hover ~ .header-rect3 {
+    bottom: -5px;
+}
+
+.header-half2:hover ~ .header-rect4,
+.header-half2:hover ~ .header-rect5,
+.header-half2:hover ~ .header-rect6 {
+    bottom: -5px;
+}
+
+.header-rect1 {
+    position: absolute;
+    bottom: -40%;
+    height: 40px;
+    width: 40px;
+    transform: translateX(1000%) rotate(40deg);
+    z-index: 1;
+    background-color: yellow;
+    transition: 0.2s;
+    box-shadow: #00000029 0 0 20px;
+}
+
+.header-rect2 {
+    position: absolute;
+    bottom: -50%;
+    height: 100px;
+    width: 100px;
+    transform: translateX(200%) rotate(30deg);
+    z-index: 1;
+    background-color: red;
+    transition: 0.2s;
+    box-shadow: #00000029 0 0 20px;
+}
+
+.header-rect3 {
+     position: absolute;
+     bottom: -80%;
+     height: 200px;
+     width: 200px;
+    transform: translateX(-20%) rotate(70deg);
+    z-index: 1;
+     background-color: blue;
+     transition: 0.2s;
+    box-shadow: #00000029 0 0 20px;
+}
+
+.header-rect4 {
+    position: absolute;
+    bottom: -40%;
+    height: 40px;
+    width: 40px;
+    transform: translateX(2400%) rotate(-90deg);
+    z-index: 1;
+    background-color: yellow;
+    transition: 0.2s;
+    box-shadow: #00000029 0 0 20px;
+}
+
+.header-rect5 {
+    position: absolute;
+    bottom: -50%;
+    height: 100px;
+    width: 100px;
+    transform: translateX(1100%) rotate(-80deg);
+    z-index: 1;
+    background-color: red;
+    transition: 0.2s;
+    box-shadow: #00000029 0 0 20px;
+}
+
+.header-rect6 {
+    position: absolute;
+    bottom: -120%;
+    height: 200px;
+    width: 200px;
+    transform: translateX(670%) rotate(-60deg);
+    z-index: 1;
+    background-color: blue;
+    transition: 0.2s;
+    box-shadow: #00000029 0 0 20px;
+}

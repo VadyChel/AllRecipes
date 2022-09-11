@@ -1,0 +1,46 @@
+.recipe-card {
+    background-color: #cccccc;
+    border-radius: 5px;
+    box-shadow: #00000029 0 0 20px;
+    max-width: 300px;
+    padding: 10px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.recipe-card:hover {
+    transform: scale(1.025);
+}
+
+.recipe-name {
+    margin-bottom: 5px;
+}
+
+.recipe-description {
+}
+
+.recipe-image {
+}
+
+.recipe-ingredients-icon {
+    font-size: 2em;
+    position: relative;
+}
+
+.recipe-ingredients {
+    position: absolute;
+    min-width: 200px;
+    min-height: 250px;
+    background-color: #ccc;
+    bottom: 0;
+    font-size: 1rem;
+    left: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: #00000029 0 0 20px;
+}
+
+
+.recipe-ingredients-title {
+    margin-top: 0;
+}
