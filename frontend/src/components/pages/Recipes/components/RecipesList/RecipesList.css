@@ -1,8 +1,7 @@
 .recipes-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     margin: 0 auto;
-}
-
-.recipes-list > div {
-    margin: 10px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
 }

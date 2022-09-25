@@ -1,6 +1,8 @@
 function Recipe() {
   return (
-    <div></div>
+    <div style={{ margin: "5% 15%" }}>
+      <h2>Назва</h2>
+    </div>
   )
 }
 

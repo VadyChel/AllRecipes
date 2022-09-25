@@ -13,7 +13,7 @@ function Recipes() {
         </span>
       </div>
       <div style={{ display: "flex", justifyContent: "center", marginTop: "5%" }}>
-        <Input value="a" placeholder="placeholder"/>
+        <Input value="" placeholder="Введіть сюди назву потрібного рецепту"/>
       </div>
       <RecipesSection title="Нові" items={[
         { name: "Pancackes", description: "jdgahkkjebgkjlergkj qegqwj qykq kjq43gq34 qwy", recipeId: "pn1" },
@@ -28,7 +28,7 @@ function Recipes() {
       ]}/>
       <RecipesSection title="Найкращі" items={[
         { name: "Pancackes", description: "jdgahkkjebgkjlergkj qegqwj qykq kjq43gq34 qwy", recipeId: "pn" },
-        { name: "Pancackes", description: "jdgahkkjebgkjlergkj qegqwj qykq kjq43gq34 qwy", recipeId: "pn2" }
+        { name: "Pancackes", description: "jdgahkkjebgkjlergkj qegqwj qykq kjq43gq34 qwy", recipeId: "pn10" }
       ]}/>
 
       <div className="end-circles">

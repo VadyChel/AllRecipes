@@ -10,19 +10,29 @@ function RecipesSection({ title, items }: IRecipesSectionProps) {
   const [hiddenItems, setHiddenItems] = useState(items.slice(3))
 
   function itemsLeft() {
+    const showItemsCopy = [...showItems]
+    const hiddenItemsCopy = [...hiddenItems]
     const lastShowItem = showItems[showItems.length-1]
     const lastHiddenItem = hiddenItems[hiddenItems.length-1]
-    showItems.pop()
-    hiddenItems.pop()
-    hiddenItems.unshift(lastShowItem)
-    showItems.unshift(lastHiddenItem)
-    setShowItems(showItems)
-    setHiddenItems(hiddenItems)
-    console.log(showItems)
+    showItemsCopy.pop()
+    hiddenItemsCopy.pop()
+    hiddenItemsCopy.unshift(lastShowItem)
+    showItemsCopy.unshift(lastHiddenItem)
+    setShowItems(showItemsCopy)
+    setHiddenItems(hiddenItemsCopy)
   }
 
   function itemsRight() {
-
+    const showItemsCopy = [...showItems]
+    const hiddenItemsCopy = [...hiddenItems]
+    const firstShowItem = showItems[0]
+    const firstHiddenItem = hiddenItems[0]
+    showItemsCopy.shift()
+    hiddenItemsCopy.shift()
+    hiddenItemsCopy.push(firstShowItem)
+    showItemsCopy.push(firstHiddenItem)
+    setShowItems(showItemsCopy)
+    setHiddenItems(hiddenItemsCopy)
   }
 
   return (
@@ -33,7 +43,9 @@ function RecipesSection({ title, items }: IRecipesSectionProps) {
       </div>
       <div style={{display: "flex"}}>
         <div className="recipes-section-arrow-container">
-          <FaArrowLeft onClick={() => itemsLeft()}/>
+          <div className="recipes-section-arrow">
+            {showItems.length >= 3 ? <FaArrowLeft onClick={() => itemsLeft()}/> : null}
+          </div>
         </div>
         <div className="recipes-section">
           {showItems.map((el) => (
@@ -41,12 +53,13 @@ function RecipesSection({ title, items }: IRecipesSectionProps) {
           ))}
         </div>
         <div className="recipes-section-arrow-container">
-          <FaArrowRight/>
+          <div className="recipes-section-arrow">
+            {showItems.length >= 3 ? <FaArrowRight onClick={() => itemsRight()}/> : null}
+          </div>
         </div>
       </div>
     </div>
   )
 }
 
-// @ts-ignore
 export default RecipesSection
